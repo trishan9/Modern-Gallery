@@ -10,7 +10,7 @@
 - [x] Add authentication (clerk)
 - [x] Add image upload (uploadthing)
 - [x] Taint (server only) // Best Practice for Handling Server Behaviors
-- [ ] Error Handling (sentry)
+- [x] Error Handling (sentry)
 - [ ] Routing / Image Page (parallel routes)
 - [ ] Delete button (Server Actions)
 - [ ] Analytics (posthog)

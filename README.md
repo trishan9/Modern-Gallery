@@ -12,6 +12,9 @@
 - [x] Taint (server only) // Best Practice for Handling Server Behaviors
 - [x] Error Handling (sentry)
 - [x] Routing / Image Page (parallel routes)
-- [ ] Analytics (posthog)
-- [ ] Delete button (Server Actions)
-- [ ] Rate-limiting (upstash)
+- [x] Analytics (posthog)
+- [x] Delete button (Server Actions)
+- [x] Rate-limiting (upstash)
+- [ ] Fix the page layout for images of different sizes
+- [ ] Selecting images on the gallery page to perform multiple actions (zustand)
+- [ ] Infinite Scrolling (react-intersection-observer/mantine hooks + framer-motion/gsap / Tanstack query's useInfiniteQuery hook, virtualization)

@@ -11,7 +11,7 @@
 - [x] Add image upload (uploadthing)
 - [x] Taint (server only) // Best Practice for Handling Server Behaviors
 - [x] Error Handling (sentry)
-- [ ] Routing / Image Page (parallel routes)
-- [ ] Delete button (Server Actions)
+- [x] Routing / Image Page (parallel routes)
 - [ ] Analytics (posthog)
+- [ ] Delete button (Server Actions)
 - [ ] Rate-limiting (upstash)

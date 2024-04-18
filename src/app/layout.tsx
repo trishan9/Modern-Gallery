@@ -9,6 +9,7 @@ import { ourFileRouter } from "./api/uploadthing/core";
 
 import { TopNav } from "./_components/topnav";
 import { Toaster } from "~/components/ui/sonner";
+import { CSPostHogProvider } from "./_analytics/providers";
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -31,21 +32,23 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+      <CSPostHogProvider>
+        <html lang="en">
+          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 
-        <body className={`font-grotesk ${grotesk.className} dark`}>
-          <div className="grid h-screen grid-rows-[auto,1fr]">
-            <TopNav />
-            <main className="overflow-y-auto">{children}</main>
-          </div>
+          <body className={`font-grotesk ${grotesk.className} dark`}>
+            <div className="grid h-screen grid-rows-[auto,1fr]">
+              <TopNav />
+              <main className="overflow-y-auto">{children}</main>
+            </div>
 
-          {modal}
+            {modal}
 
-          <div id="modal-root"></div>
-          <Toaster />
-        </body>
-      </html>
+            <div id="modal-root"></div>
+            <Toaster />
+          </body>
+        </html>
+      </CSPostHogProvider>
     </ClerkProvider>
   );
 }

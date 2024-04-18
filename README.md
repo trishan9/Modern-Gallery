@@ -8,8 +8,8 @@
 - [x] Set up a real database (vercel postgres)
 - [x] Attach database to UI
 - [x] Add authentication (clerk)
-- [ ] Taint (server only)
-- [ ] Add image upload (uploadthing)
+- [x] Add image upload (uploadthing)
+- [ ] Taint (server only) // Best Practice for Handling Server Behaviors
 - [ ] Error Handling (sentry)
 - [ ] Routing / Image Page (parallel routes)
 - [ ] Delete button (Server Actions)

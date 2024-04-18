@@ -45,6 +45,11 @@ export function UploadButton() {
         icon: <Loader2 className="h-5 w-5 animate-spin" />,
       });
     },
+    onUploadError(error) {
+      posthog.capture("upload_error", { error });
+      toast.dismiss("upload-begin");
+      toast.error("Upload failed");
+    },
     onClientUploadComplete() {
       toast.dismiss("upload-begin");
       toast("Upload complete!");

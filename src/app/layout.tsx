@@ -1,8 +1,8 @@
-import "~/styles/globals.css";
+import "~/styles/globals.scss";
 import "@uploadthing/react/styles.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
-import { Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
@@ -10,6 +10,11 @@ import { ourFileRouter } from "./api/uploadthing/core";
 import { TopNav } from "./_components/topnav";
 import { Toaster } from "~/components/ui/sonner";
 import { CSPostHogProvider } from "./_analytics/providers";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -36,7 +41,7 @@ export default function RootLayout({
         <html lang="en">
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 
-          <body className={`font-grotesk ${grotesk.className} dark`}>
+          <body className={`${grotesk.className} ${inter.variable}`}>
             <div className="grid h-screen grid-rows-[auto,1fr]">
               <TopNav />
               <main className="overflow-y-auto">{children}</main>

@@ -1,5 +1,5 @@
 import "server-only";
-import { revalidatePath } from "next/cache";
+
 import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 import { and, eq } from "drizzle-orm";
@@ -46,6 +46,6 @@ export async function deleteImage(id: number) {
         },
     });
 
-    revalidatePath("/");
+    // revalidatePath("/");
     redirect("/");
 }

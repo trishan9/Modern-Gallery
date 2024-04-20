@@ -1,5 +1,7 @@
 import FullImageView from "~/components/full-image-view";
 
+export const dynamic = "force-dynamic";
+
 export default function PhotoPage({
   params: { id: photoId },
 }: {
